@@ -10,7 +10,8 @@ namespace schoolCore
             var school = new School("Tec Monterrey", 2012);
             school.Country = "México";
             school.City = "Monterrey";
-            Console.WriteLine(school.Name);
+            school.SchoolType = SchoolTypes.ElementarySchool;
+            Console.WriteLine(school);
         }
     }
 }
