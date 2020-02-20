@@ -20,6 +20,16 @@ namespace schoolCore.Entity
 
         public School(string name, int creationYear) => (this.name, CreationYear) = (name, creationYear);
 
+        public School(string name, int creationYear, 
+                      SchoolTypes schoolTypes,
+                      string country="",
+                      string city="")
+        {
+            (this.name, CreationYear) = (name, creationYear);
+            Country = country;
+            City = city;
+        }
+
         public override string ToString()
         {
             return $"Name: {name}, Type: {SchoolType} \nCountry: {Country}, City: {City}";
