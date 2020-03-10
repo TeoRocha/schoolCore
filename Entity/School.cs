@@ -1,7 +1,11 @@
+using System;
+using System.Collections.Generic;
+
 namespace schoolCore.Entity
 {
-    class School
+    public class School
     {
+        public string UniqueId { get; private set; } = Guid.NewGuid().ToString();
         string name;
 
         public string Name
@@ -17,6 +21,9 @@ namespace schoolCore.Entity
         public string City { get; set; }
 
         public SchoolTypes SchoolType { get; set; }
+
+        public Course[] Courses { get; set;}
+        public List<Course> listCourses { get; set; }
 
         public School(string name, int creationYear) => (this.name, CreationYear) = (name, creationYear);
 
